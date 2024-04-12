@@ -30,7 +30,3 @@ while user_prompt:
     else:
         print("You need to enter your age as digits.")
 print(f"Your age is {age}")
-
-
-
-

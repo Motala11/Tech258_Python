@@ -53,10 +53,10 @@ for inner_dict in dict_data.values():
 # - if the number equals 3, it prints 'I found three'
 # - if the number is greater than 3, it prints 'greater than 3'
 
-for number in list_data:
-    if number < 3:
+for num in list_data:
+    if num < 3:
         print("Less than 3.")
-    elif number == 3:
+    elif num == 3:
         print("I found 3.")
     else:
         print("Greater than 3.")
