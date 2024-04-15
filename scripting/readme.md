@@ -18,7 +18,7 @@ Python consists of a plethora of built-in libraries, such as:
 - collections
 - json
 ## Here are 10 Python scripts a DevOps engineer may use:
-- Infrastructure as Code script
+- Infrastructure as Code script 
 - Deployment script
 - Configuration management script
 - Monitoring script
@@ -28,3 +28,20 @@ Python consists of a plethora of built-in libraries, such as:
 - Restore script
 - Container script
 - Notification script
+
+## Example of Infrastructure as Code script
+```import { App, TerraformStack, Token } 
+
+class MyStack extends TerraformStack {
+ constructor(scope: Construct, name: string) {
+   super(scope, name);
+    new AwsProvider(this, 'aws', {
+     region: 'us-east-1'
+   });
+    const vpc = new Vpc(this, 'my-vpc', {
+     cidrBlock: '10.0.0.0/12'
+   });
+   const subnet = new Subnet(this, 'my-subnet', {
+     vpcId: Token.asString(vpc.id),
+     cidrBlock: '10.0.0.0/23'
+   });```
